@@ -1,0 +1,44 @@
+# Version control / IDE
+.git
+.gitignore
+.gitattributes
+.editorconfig
+.vscode
+.idea
+.fleet
+.nova
+.zed
+
+# Local environment files — production secrets come from Render env vars.
+.env
+.env.*
+!.env.example
+
+# Dependencies (rebuilt inside the image).
+vendor
+node_modules
+public/build
+public/hot
+public/storage
+
+# Storage runtime artefacts — created fresh inside the container.
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/testing/*
+!storage/**/.gitignore
+
+# Tests / dev tooling not needed at runtime.
+tests
+phpunit.xml
+.phpunit.cache
+.phpunit.result.cache
+.phpactor.json
+
+# Docs / misc.
+README.md
+*.log
+.DS_Store
+Thumbs.db
+docker-compose.yml
